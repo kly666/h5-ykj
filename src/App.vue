@@ -1,28 +1,45 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Head />
+    <Main />
+    <Floor />
+    <Menu />
+    <PageDownload />
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Head from "views/Head/Head";
+import Main from "views/Main/Main";
+import Floor from "views/Floor/Floor";
+import Menu from "views/Footer/Menu";
+import PageDownload from "views/Footer/PageDownload";
+import Footer from "views/Footer/Footer";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Head,
+    Main,
+    Floor,
+    Menu,
+    PageDownload,
+    Footer,
+  },
+
+  // beforeCreate() {
+  //   if (
+  //     !navigator.userAgent.match(
+  //       /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+  //     )
+  //   ) {
+  //     window.location.href = "https://www.baidu.com"; //电脑
+  //   }
+  // },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "assets/css/normalize.css";
 </style>
